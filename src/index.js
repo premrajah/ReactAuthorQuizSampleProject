@@ -65,6 +65,7 @@ const authors = [
 // Application state
 const state = {
   turnData: getTurnData(authors),
+  highlight: '',
 };
 
 function getTurnData(authors) {
