@@ -17,6 +17,34 @@ const authors = [
       'The Adventures of Tom Sawyer',
     ],
   },
+  {
+    id: '2',
+    name: 'Joseph Conrad',
+    imageUrl: 'images/authors/josephconrad.png',
+    imageSource: 'Wikimedia Commons',
+    books: ['Heart Of Darkness'],
+  },
+  {
+    id: '3',
+    name: 'J. R. R. Tolkien',
+    imageUrl: 'images/authors/jrrtolkien.jpg',
+    imageSource: 'Wikimedia Commons',
+    books: ['The Lord of the Rings', 'The Hobbit'],
+  },
+  {
+    id: '4',
+    name: 'Jane Austen',
+    imageUrl: 'images/authors/janeausten.jpg',
+    imageSource: 'Wikimedia Commons',
+    books: ['Pride and Prejudice', ' Persuasion'],
+  },
+  {
+    id: '5',
+    name: 'Charlotte Bronte',
+    imageUrl: 'images/authors/charlottebronte.png',
+    imageSource: 'Wikimedia Commons',
+    books: ['Jane Eyre', ' Shirley', 'Villette'],
+  },
 ];
 
 // Application state
