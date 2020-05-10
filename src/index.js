@@ -68,6 +68,12 @@ const state = {
   highlight: '',
 };
 
+function onAnswerSelected(answer) {
+  const isCorrect = state.turnData.author.books.some((book) => book === answer);
+  state.highlight = isCorrect ? 'correct' : 'wrong';
+  render();
+}
+
 function getTurnData(authors) {
   // join all book collections into one
   const allBooks = authors.reduce((accumulator, current) => {
@@ -83,12 +89,15 @@ function getTurnData(authors) {
   };
 }
 
-ReactDOM.render(
-  <React.StrictMode>
-    <AuthorQuiz {...state} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+function render() {
+  ReactDOM.render(
+    <React.StrictMode>
+      <AuthorQuiz {...state} onAnswerSelected={onAnswerSelected} />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
+render();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
