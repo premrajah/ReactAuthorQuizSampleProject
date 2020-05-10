@@ -43,7 +43,14 @@ const authors = [
     name: 'Charlotte Bronte',
     imageUrl: 'images/authors/charlottebronte.png',
     imageSource: 'Wikimedia Commons',
-    books: ['Jane Eyre', ' Shirley', 'Villette'],
+    books: ['Jane Eyre', 'Shirley', 'Villette'],
+  },
+  {
+    id: '6',
+    name: 'William Shakespeare',
+    imageUrl: 'images/authors/williamshakespeare.jpg',
+    imageSource: 'Wikimedia Commons',
+    books: ['Romeo and Juliet', 'Hamlet', 'Macbeth'],
   },
 ];
 
