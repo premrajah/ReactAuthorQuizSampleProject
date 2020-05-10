@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import AuthorQuiz from './AuthorQuiz';
 import * as serviceWorker from './serviceWorker';
+import { shuffle, sample } from 'underscore';
 
 const authors = [
   {
@@ -56,11 +57,23 @@ const authors = [
 
 // Application state
 const state = {
-  turnData: {
-    author: authors[0],
-    books: authors[0].books,
-  },
+  turnData: getTurnData(authors),
 };
+
+function getTurnData(authors) {
+  // join all book collections into one
+  const allBooks = authors.reduce((accumulator, current) => {
+    return accumulator.concat(current.books);
+  }, []);
+
+  const randomBooks = shuffle(allBooks).slice(0, 4);
+  const answer = sample(randomBooks);
+
+  return {
+    books: randomBooks,
+    author: authors.find((author) => author.books.some((title) => title === answer)),
+  };
+}
 
 ReactDOM.render(
   <React.StrictMode>
