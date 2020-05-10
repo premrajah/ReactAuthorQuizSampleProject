@@ -13,16 +13,24 @@ function Hero() {
   );
 }
 
+function Book({ title }) {
+  return (
+    <div className='answer p-3'>
+      <h4>{title}</h4>
+    </div>
+  );
+}
+
 function Turn({ author, books }) {
   return (
-    <div className='row Turn' style={{ backgroundColor: 'white' }}>
-      <div className='col-4 offset-1'>
+    <div className='row p-2' style={{ backgroundColor: 'white' }}>
+      <div className='col-4 offset-1 turn-img-wrapper'>
         <img src={author.imageUrl} className='authorimage' alt='Author' />
       </div>
 
       <div className='col-6'>
         {books.map((title) => (
-          <p>{title}</p>
+          <Book title={title} key={title} />
         ))}
       </div>
     </div>
@@ -46,11 +54,11 @@ function Footer() {
   );
 }
 
-function AuthorQuiz() {
+function AuthorQuiz({ turnData }) {
   return (
     <div className='container-fluid'>
       <Hero />
-      <Turn />
+      <Turn {...turnData} />
       <Continue />
       <Footer />
     </div>
