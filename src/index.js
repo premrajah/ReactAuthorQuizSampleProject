@@ -53,6 +53,13 @@ const authors = [
     imageSource: 'Wikimedia Commons',
     books: ['Romeo and Juliet', 'Hamlet', 'Macbeth'],
   },
+  {
+    id: '7',
+    name: 'J. K. Rowling',
+    imageUrl: 'images/authors/jkrowling.jpg',
+    imageSource: 'Wikimedia Commons',
+    books: ['Fantastic Beasts', "Harry Potter and the Philosopher's Stone", 'The Casual Vacancy'],
+  },
 ];
 
 // Application state
