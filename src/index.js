@@ -13,6 +13,14 @@ const authors = [
   },
 ];
 
+// Application state
+const state = {
+  turnDate: {
+    author: authors[0],
+    books: authors[0].books,
+  },
+};
+
 ReactDOM.render(
   <React.StrictMode>
     <AuthorQuiz />
