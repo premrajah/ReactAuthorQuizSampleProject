@@ -12,9 +12,9 @@ const authors = [
     imageSource: 'Wikimedia Commons',
     books: [
       'The Adventures of Huckleberry Finn',
-      'Pride and Prejudice',
-      ' To Kill a Mockingbird',
-      ' The Great Gatsby ',
+      'Roughing It',
+      'The Mysterious Stranger',
+      'The Adventures of Tom Sawyer',
     ],
   },
 ];
